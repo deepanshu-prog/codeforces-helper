@@ -43,13 +43,13 @@ After installation, the `cf` command is available globally.
 cf fetch 1234
 
 # Test your solution
-cf test 1234/A
+cf test example_contest/A
 
 # Watch mode — auto-retest on save
-cf watch 1234/A
+cf watch example_contest/A
 
 # Stress test
-cf stress 1234/A
+cf stress example_contest/A
 ```
 
 ## Usage
@@ -100,13 +100,13 @@ See [example_contest/](example_contest/) for a real example generated from conte
 
 ```bash
 # Test all sample cases for problem A
-cf test 1234/A
+cf test example_contest/A
 
 # Test with a different language
-cf test 1234/A --lang python
+cf test example_contest/A --lang python
 
 # Run only specific test cases
-cf test 1234/A --tests 1 3
+cf test example_contest/A --tests 1 3
 ```
 
 Output example:
@@ -136,10 +136,10 @@ Output example:
 Automatically recompiles and retests whenever you modify your solution file:
 
 ```bash
-cf watch 1234/A
+cf watch example_contest/A
 
 # Custom poll interval (default: 1 second)
-cf watch 1234/A --interval 0.5
+cf watch example_contest/A --interval 0.5
 ```
 
 ### Stress Testing
@@ -147,9 +147,9 @@ cf watch 1234/A --interval 0.5
 Find counter-examples by comparing your optimized solution against a brute-force one:
 
 ```bash
-cf stress 1234/A
-cf stress 1234/A --iterations 5000
-cf stress 1234/A --generator custom_gen.cpp --brute slow.cpp
+cf stress example_contest/A
+cf stress example_contest/A --iterations 5000
+cf stress example_contest/A --generator custom_gen.cpp --brute slow.cpp
 ```
 
 **Setup:** Create these files in your problem directory:
@@ -164,10 +164,10 @@ When a mismatch is found, the failing input is saved to `stress_fail_input.txt`.
 
 ```bash
 # Interactive — type input, then Ctrl+D (Linux) or Ctrl+Z (Windows)
-cf add-test 1234/A
+cf add-test example_contest/A
 
 # Inline
-cf add-test 1234/A --input "5\n1 2 3 4 5" --output "15"
+cf add-test example_contest/A --input "5\n1 2 3 4 5" --output "15"
 ```
 
 ### Codeforces API
@@ -231,7 +231,7 @@ cf config --template-dir ~/my-templates/
 ## Project Structure
 
 ```
-codeforces-helper/
+codeforces-helper-/
 ├── cf_helper/               # Core package
 │   ├── __init__.py          # Version
 │   ├── __main__.py          # python -m cf_helper
@@ -262,7 +262,7 @@ If you don't want to install globally, you can run directly:
 
 ```bash
 python -m cf_helper fetch 1234
-python -m cf_helper test 1234/A
+python -m cf_helper test example_contest/A
 ```
 
 Or use the legacy scripts (still included for backwards compatibility):
