@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeforces-helper"
+version = "2.0.0"
+description = "All-in-one Codeforces CLI: scrape test cases, auto-test, stress test, watch mode, standings & more"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Aman Yadav"},
+]
+keywords = ["codeforces", "competitive-programming", "cli", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+    "beautifulsoup4>=4.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/yadav-aman/codeforces-helper"
+Repository = "https://github.com/yadav-aman/codeforces-helper"
+Issues = "https://github.com/yadav-aman/codeforces-helper/issues"
+
+[project.scripts]
+cf = "cf_helper.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cf_helper*"]
+
+[tool.setuptools.package-data]
+cf_helper = ["../templates/*"]
