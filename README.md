@@ -24,8 +24,8 @@ A powerful CLI tool for competitive programmers on [Codeforces](https://codeforc
 **Requirements:** Python 3.8+ and a compiler for your language (g++, javac, etc.)
 
 ```bash
-git clone https://github.com/yadav-aman/codeforces-helper.git
-cd codeforces-helper
+git clone https://github.com/deepanshu-prog/codeforces-helper-.git
+cd codeforces-helper-
 pip install -e .
 ```
 

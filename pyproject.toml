@@ -10,7 +10,7 @@ readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [
-    {name = "Aman Yadav"},
+    {name = "Deepanshu"},
 ]
 keywords = ["codeforces", "competitive-programming", "cli", "testing"]
 classifiers = [
@@ -32,9 +32,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yadav-aman/codeforces-helper"
-Repository = "https://github.com/yadav-aman/codeforces-helper"
-Issues = "https://github.com/yadav-aman/codeforces-helper/issues"
+Homepage = "https://github.com/deepanshu-prog/codeforces-helper-"
+Repository = "https://github.com/deepanshu-prog/codeforces-helper-"
+Issues = "https://github.com/deepanshu-prog/codeforces-helper-/issues"
 
 [project.scripts]
 cf = "cf_helper.cli:main"
